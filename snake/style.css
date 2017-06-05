@@ -124,6 +124,17 @@ body {
     -webkit-transform: translate3d(20px, 181px, 0);
     transform: translate3d(20px, 181px, 0);
 }
+.buttons div{
+    width: 33%;
+    height: 33%;
+    float: left;
+    text-align: center;
+/*    background-color: hotpink;*/
+}
+.buttons div:first-child,
+.buttons div:last-child{
+    margin: 0 33%;
+}
 
 .reset-button {
     width: 38px;

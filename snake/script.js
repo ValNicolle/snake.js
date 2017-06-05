@@ -303,6 +303,39 @@ $(function () {
 
     }
 
+    $("#center").click(Go_center);
+    $("#top").click(Go_top);
+    $("#bottom").click(Go_bottom);
+    $("#left").click(Go_left);
+    $("#right").click(Go_right);
+
+    function Go_top() {
+        if (Direction != "bottom") {
+            Direction = "top";
+        }
+    }
+
+    function Go_bottom() {
+        if (Direction != "top") {
+            Direction = "bottom";
+        }
+    }
+
+    function Go_left() {
+        if (Direction != "right") {
+            Direction = "left";
+        }
+    }
+
+    function Go_right() {
+        if (Direction != "left") {
+            Direction = "right";
+        }
+    }
+
+    function Go_center() {
+        alert("SALOOOOOPE");
+    }
 
 
     // Utils

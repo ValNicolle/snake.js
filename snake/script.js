@@ -14,6 +14,7 @@ $(function () {
         go = true,
         speed = 120,
         tic,
+        authorize_change = true,
         first_start = true;
 
     startGame();
@@ -236,30 +237,41 @@ $(function () {
         clearInterval(tic);
         tic = setInterval(function () {
             moveSnake();
-            console.log(value);
         }, value);
     }
+
+    function launchWait(){
+	    setTimeout(function(){
+	    	authorize_change = true;
+	    }, (speed/2));
+    }
+    
 
 
     /****** Appui sur fleches du clavier **********/
     $(document).keydown(function (e) {
 
-        if (e.keyCode == 38 && Direction != "bottom") { // fleche haut
-            Direction = "top";
+    	if(authorize_change){
+    		if (e.keyCode == 38 && Direction != "bottom") { // fleche haut
+            	Direction = "top";
 
-        }
-        if (e.keyCode == 39 && Direction != "left") { // fleche droite
-            Direction = "right";
+	        }
+	        if (e.keyCode == 39 && Direction != "left") { // fleche droite
+	            Direction = "right";
 
-        }
-        if (e.keyCode == 40 && Direction != "top") { // fleche bas
-            Direction = "bottom";
+	        }
+	        if (e.keyCode == 40 && Direction != "top") { // fleche bas
+	            Direction = "bottom";
 
-        }
-        if (e.keyCode == 37 && Direction != "right") { // fleche gauche
-            Direction = "left";
+	        }
+	        if (e.keyCode == 37 && Direction != "right") { // fleche gauche
+	            Direction = "left";
 
-        }
+	        }
+	        authorize_change = false;
+    		launchWait();
+    	}
+        
         if (go == false && e.keyCode == 13) {
             restartGame();
         }
@@ -276,6 +288,7 @@ $(function () {
             $("#grid-container .fruit-on").removeClass("fruit-on");
             $("#restart-container").css("opacity", "0");
 
+            // redéfinition de variables
             Direction = "left";
             newX = 0;
             newY = 0;

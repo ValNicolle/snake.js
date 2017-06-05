@@ -1,99 +1,104 @@
 @font-face {
-  font-family: 'ARCADECLASSIC';
+    font-family: 'ARCADECLASSIC';
     src: url('fonts/ARCADECLASSIC.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-weight: normal;
+    font-style: normal;
 }
 
-body{
-  font-family: 'ARCADECLASSIC';
-  /*background-image: url(images/snake-pattern.jpg)*/
-  background-color: #e3e3e3;
-}
-#console{
-  width: 930px;
-  padding: 20px 0;
-  border: 32px solid transparent;
-  border-image: url(images/bord-console.png) 32 round;
-  /*border: 13px solid #c71717;*/
-  margin: auto;
-  /*background-color: #f5e1ab;*/
-  background-image: url(images/fond-console.jpg);
-  border-radius: 20px;
-  box-shadow: 6px 8px 46px black;
-}
-#screen-container{
-  margin: 0 auto;
-  width: 600px;
-  height: 470px;
-  border: 5px solid black;
-  background-color: #71ab8b;
-  background-image: url(images/fond.jpg);
-}
-#grid-container{
-  width: 600px;
-  height: 500px;
-  border: 2px solid black;
-  margin: 20px auto 10px;
-  box-shadow: 0px 0px 7px inset;
+body {
+    font-family: 'ARCADECLASSIC';
+    /*background-image: url(images/snake-pattern.jpg)*/
+    background-color: #e3e3e3;
 }
 
-.case{
-  width: 10px;
-  height: 10px;
-  float: left;
-  /*border: 1px solid #3c3c3c;*/
-  box-sizing: border-box;
+#console {
+    width: 930px;
+    padding: 20px 0;
+    border: 32px solid transparent;
+    border-image: url(images/bord-console.png) 32 round;
+    /*border: 13px solid #c71717;*/
+    margin: auto;
+    /*background-color: #f5e1ab;*/
+    background-image: url(images/fond-console.jpg);
+    border-radius: 20px;
+    box-shadow: 6px 8px 46px black;
 }
 
-.snake-part{
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  background-color: black;
-  border-radius: 4px;
-  box-shadow: 0px 3px 4px #000000;
+#screen-container {
+    margin: 0 auto;
+    width: 600px;
+    height: 470px;
+    border: 5px solid black;
+    background-color: #71ab8b;
+    background-image: url(images/fond.jpg);
 }
 
-.fruit{
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  background-image: url(images/fruit.png);
+#grid-container {
+    width: 600px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 20px auto 10px;
+    box-shadow: 0px 0px 7px inset;
 }
 
-#restart-container{
-  width: 500px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  opacity: 0
+.case {
+    width: 10px;
+    height: 10px;
+    float: left;
+    /*border: 1px solid #3c3c3c;*/
+    box-sizing: border-box;
 }
 
-#restart-button{
-  font-size: 35px;
-  padding: 10px 15px 15px 15px;
-  border: 2px solid black;
-  display: inline-block;
-  margin: auto;
-  text-shadow: 0 4px 5px #383838;
-  box-shadow: 1px 3px 4px #3c3c3c;
+.snake-part {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: black;
+    border-radius: 4px;
+    box-shadow: 0px 3px 4px #000000;
 }
 
-#restart-button img{
-  position: relative;
-  top: 5px;
-  left: -5px;
+.fruit {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-image: url(images/fruit.png);
 }
 
-.score-container{
-  width: 600px;
-  margin: 0 0 0 50px;
-  font-size: 21px;
-  text-shadow: 0 3px 4px #383838;
-  position: absolute;
+#restart-container {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    opacity: 0
 }
+
+#restart-button {
+    font-size: 35px;
+    padding: 10px 15px 15px 15px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: auto;
+    text-shadow: 0 4px 5px #383838;
+    box-shadow: 1px 3px 4px #3c3c3c;
+    background-color: rgba(168, 205, 151, 0.95);
+}
+
+#restart-button img {
+    position: relative;
+    top: 5px;
+    left: -5px;
+}
+
+.score-container {
+    width: 600px;
+    margin: 0 0 0 50px;
+    font-size: 21px;
+    text-shadow: 0 3px 4px #383838;
+    position: absolute;
+}
+
 
 /*.button_top{
   background: #c71717;
@@ -111,42 +116,20 @@ body{
 }
 */
 
-.buttons{
-  width: 100px;
-  height: 100px;
-  background-image: url(images/controls.png);
-  position: absolute;
-  -webkit-transform: translate3d(20px,181px,0);
-          transform: translate3d(20px,181px,0);
+.buttons {
+    width: 100px;
+    height: 100px;
+    background-image: url(images/controls.png);
+    position: absolute;
+    -webkit-transform: translate3d(20px, 181px, 0);
+    transform: translate3d(20px, 181px, 0);
 }
 
-.reset-button{
-  width: 38px;
-  height: 38px;
-  position: absolute;
-  background-image: url(images/reset.png);
-  transform: translate3d(853px,50px,0);
-  cursor: pointer;
+.reset-button {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    background-image: url(images/reset.png);
+    transform: translate3d(853px, 50px, 0);
+    cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
